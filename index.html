@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enlov Water | Glow From Within</title>
+
+    <!-- Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            color: #2b2b2b;
+            padding-bottom: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0%;
+            height: 2px;
+            background: linear-gradient(90deg, #459845, #85c17e);
+            transition: width 0.3s ease;
+            border-radius: 9999px;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: #2b2b2b;
+        }
+    </style>
+</head>
+
+<body class="bg-[#fafbfb] text-[#222]">
+
+    <!-- NAVBAR -->
+    <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md transition-all duration-300">
+        <div id="nav-inner"
+            class="max-w-7xl mx-auto px-6 py-2 flex flex-col items-center justify-center md:flex-row md:justify-between transition-all duration-300">
+
+            <!-- LOGO -->
+            <a href="#home" id="nav-logo" class="mb-2 md:mb-0 transition-all duration-300">
+                <img src="img/enlov logo.jpg" alt="Enlov Logo" class="h-20 md:h-24 w-auto" />
+            </a>
+            <!-- HAMBURGER -->
+            <button id="nav-toggle" class="md:hidden text-[#459845]">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- NAV LINKS DESKTOP -->
+            <div id="nav-links" class="hidden md:flex space-x-6">
+                 <a href="#about" class="nav-link" data-section="about">Buy</a>
+                <a href="#benefits" class="nav-link" data-section="benefits">Benefits</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+        </div>
+
+        <!-- NAV LINKS MOBILE -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-center">
+            <a href="#about" class="block nav-link" data-section="about">Buy</a>
+            <a href="#benefits" class="block nav-link" data-section="benefits">Benefits</a>
+            <a href="#contact" class="block nav-link" data-section="contact">Contact</a>
+        </div>
+    </nav>
+    <!-- HERO SECTION -->
+    <header id="home" class="relative text-center px-6 pt-32 pb-20 overflow-hidden">
+        <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <source src="video/20250803_2201_Elegant Water Splash_remix_01k1rvswsmey3r2aq2ra3mcbmq.mp4"
+                type="video/mp4" />
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-b from-white/50 via-[#e2f4e5]/50 to-[#fafbfb]/60 z-0"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto mt-24 md:mt-32" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-4xl md:text-6xl font-bold text-[#3a6040] leading-tight">
+                Hydration Meets Chlorophyll
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-[#4a4a4a] leading-relaxed">
+                Glow from within with Enlov premium plant-powered water made to nourish, detox, and elevate your every
+                sip.
+            </p>
+            <div class="mt-8">
+                <a href="#about"
+                    class="inline-block px-8 py-3 rounded-full bg-[#459845] text-white font-semibold hover:bg-[#367434] transition-all">
+                    Discover Enlov
+                </a>
+            </div>
+        </div>
+
+        <!-- Smooth Curve Transition -->
+        <div class="absolute bottom-0 left-0 w-full h-12 z-10 -mb-2">
+            <svg viewBox="0 0 1440 320" class="w-full h-full" preserveAspectRatio="none">
+                <path fill="#fafbfb"
+                    d="M0,64L48,90.7C96,117,192,171,288,186.7C384,203,480,181,576,170.7C672,160,768,160,864,165.3C960,171,1056,181,1152,176C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg>
+        </div>
+    </header>
+
+    <section id="benefits" class="relative pt-20 pb-28 px-6 md:px-12 bg-[#fafbfb] rounded-t-[80px] z-10">
+
+        <div class="max-w-6xl mx-auto text-center mb-14">
+            <h2 class="text-4xl font-bold text-[#3a6040]" data-aos="fade-up">Why Enlov?</h2>
+            <p class="text-[#555] text-lg md:text-xl mt-4" data-aos="fade-up" data-aos-delay="100">
+                Enlov is a reminder to return to yourself — through hydration, ritual, and self-respect.
+            </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-[2.5rem] shadow-xl p-8 border border-[#fce7ef] transition transform hover:scale-105"
+                data-aos="zoom-in">
+
+                <div class="h-14 w-14 mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" stroke-width="1.5"
+                        stroke="#e49bb4" class="w-full h-full">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M24 4C18 12 12 18 12 26c0 6.627 5.373 12 12 12s12-5.373 12-12c0-8-6-14-12-22z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20 26c1.5-3 4-5 8-5" />
+                    </svg>
+                </div>
+
+                <h3 class="text-xl font-semibold text-[#459845] mb-2">Daily Detox Ritual</h3>
+                <p class="text-[#444]">Flush stress and toxins with a drink that supports your natural rhythm and
+                    balance.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-[2.5rem] shadow-xl p-8 border border-[#f7e7e8] transition transform hover:scale-105"
+                data-aos="zoom-in" data-aos-delay="150">
+
+                <div class="h-14 w-14 mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="#e49bb4"
+                        stroke-width="1.5" class="w-full h-full">
+                        <circle cx="24" cy="24" r="8" />
+                        <line x1="24" y1="4" x2="24" y2="10" stroke-linecap="round" />
+                        <line x1="24" y1="38" x2="24" y2="44" stroke-linecap="round" />
+                        <line x1="4" y1="24" x2="10" y2="24" stroke-linecap="round" />
+                        <line x1="38" y1="24" x2="44" y2="24" stroke-linecap="round" />
+                        <line x1="9" y1="9" x2="14" y2="14" stroke-linecap="round" />
+                        <line x1="34" y1="34" x2="39" y2="39" stroke-linecap="round" />
+                        <line x1="9" y1="39" x2="14" y2="34" stroke-linecap="round" />
+                        <line x1="34" y1="14" x2="39" y2="9" stroke-linecap="round" />
+                    </svg>
+                </div>
+
+                <h3 class="text-xl font-semibold text-[#459845] mb-2">Glow From Within</h3>
+                <p class="text-[#444]">
+                    Your skin mirrors your insides. Chlorophyll supports radiant skin and deeper cellular health.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-[2.5rem] shadow-xl p-8 border border-[#fce7ef] transition transform hover:scale-105"
+                data-aos="zoom-in" data-aos-delay="300">
+
+                <div class="h-14 w-14 mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#e49bb4"
+                        stroke-width="1.5" class="w-full h-full">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 3L4 14h7l-1 7 9-11h-7l1-7z" />
+                    </svg>
+                </div>
+
+                <h3 class="text-xl font-semibold text-[#459845] mb-2">Natural Energy</h3>
+                <p class="text-[#444]">
+                    Sustain your clarity, creativity, and calm — without the crash. Just plants and purpose.
+                </p>
+            </div>
+        </div>
+    </section> <!-- ABOUT SECTION -->
+    <section id="about"
+        class="relative z-10 pt-28 pb-28 px-6 md:px-12 bg-white/80 backdrop-blur-sm overflow-hidden rounded-t-[80px]">
+
+        <!-- Wavy Top Divider -->
+        <div class="absolute top-0 left-0 w-full h-24 bg-[#fafbfb] rounded-b-[100%] z-[-1]"></div>
+
+        <!-- ABOUT CONTENT -->
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <!-- Left Image -->
+            <div class="about-image opacity-0 transform -translate-x-16 transition-all duration-1000 ease-out">
+                <img src="img/portrait-young-man-drinking-water.jpg" alt="Chlorophyll Origin"
+                    class="w-full h-auto object-cover rounded-3xl shadow-2xl" />
+            </div>
+
+            <!-- Right Text -->
+            <div class="about-text opacity-0 transform translate-x-16 transition-all duration-1000 ease-out">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#459845] mb-6 leading-snug">
+                    The Origins of Chlorophyll Water
+                </h2>
+                <p class="text-[#444] text-lg md:text-xl leading-relaxed mb-4">
+                    Chlorophyll water traces its roots to the ancient science of using plants for internal healing.
+                    Extracted from green plants, chlorophyll is the lifeblood of nature rich in antioxidants and
+                    nutrients.
+                </p>
+                <p class="text-[#444] text-lg md:text-xl leading-relaxed">
+                    Enlov makes this ancient botanical power accessible, bottled with intention for the modern-day
+                    health-conscious. It’s more than hydration it’s a ritual.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Import Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* ✅ Hide horizontal scrollbar across devices */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* ✅ Optional overlay to darken/lighten for contrast */
+        .splash-overlay::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.4);
+            /* adjust as needed */
+            z-index: 0;
+        }
+    </style>
+
+    <!-- ✅ MOODBOARD SECTION -->
+    <section id="moodboard" class="relative py-24 px-6 bg-white text-gray-700 overflow-hidden z-10 splash-overlay"
+        style="background-image: url('img/c5.png'); 
+           background-size: contain; 
+           background-position: center; 
+           background-repeat: no-repeat; 
+           background-blend-mode: normal;">
+
+        <!-- 🔄 Scrollable Moodboard Cards -->
+        <div
+            class="relative z-10 flex gap-8 overflow-x-auto no-scrollbar px-2 md:px-0 snap-x snap-mandatory scroll-smooth">
+            <!-- 💬 Moodboard Heading -->
+            <div class="relative z-10 max-w-5xl mx-auto text-center mb-14">
+              <h2 class="text-5xl md:text-6xl tracking-tight leading-tight mb-4 text-[#5c7d6d]"
+    style="font-family: 'Abril Fatface', cursive;">
+    The Feeling of Enlov
+</h2>
+
+                <p class="text-lg md:text-xl tracking-wide italic opacity-90 text-[#8a8a8a]"
+                    style="font-family: 'Montserrat', sans-serif;">
+                    Where ritual becomes a vibe — and self-care becomes cultural.
+                </p>
+            </div>
+
+            <!-- 🔄 Scrollable Moodboard Cards -->
+            <div
+                class="relative z-10 flex gap-8 overflow-x-auto no-scrollbar px-2 md:px-0 snap-x snap-mandatory scroll-smooth">
+
+                <!-- 🌸 Card 1 -->
+                <div
+                    class="min-w-[300px] snap-center bg-[#b04e9744] rounded-[2.5rem] shadow-2xl backdrop-blur-md p-6 flex flex-col items-center transform hover:-translate-y-1 transition-all duration-500">
+                    <img src="img/mAN.jpeg" alt="Soft morning"
+                        class="rounded-2xl w-64 h-56 object-cover mb-6 mx-auto shadow-md" />
+                    <p class="text-lg font-light text-center tracking-wide"
+                        style="font-family: 'Abril Fatface', cursive;">
+                        Soft mornings start here.
+                    </p>
+                </div>
+
+                <!-- 💧 Card 2 -->
+                <div
+                    class="min-w-[300px] snap-center bg-[#b04e9744] rounded-[2.5rem] shadow-2xl backdrop-blur-md p-6 flex flex-col items-center transform hover:-translate-y-1 transition-all duration-500">
+                    <img src="img/kk.jpeg" alt="Pour water"
+                        class="rounded-2xl w-64 h-56 object-cover mb-6 mx-auto shadow-md" />
+                    <p class="text-lg font-light text-center tracking-wide"
+                        style="font-family: 'Abril Fatface', cursive;">
+                        Pour. Pause. Glow.
+                    </p>
+                </div>
+
+                <!-- 🍃 Card 3 -->
+                <div
+                    class="min-w-[300px] snap-center bg-[#b04e9744] rounded-[2.5rem] shadow-2xl backdrop-blur-md p-6 flex flex-col items-center transform hover:-translate-y-1 transition-all duration-500">
+                    <img src="img/voman.jpeg" alt="Nature reset"
+                        class="rounded-2xl w-64 h-56 object-cover mb-6 mx-auto shadow-md" />
+                    <p class="text-lg font-light text-center tracking-wide"
+                        style="font-family: 'Abril Fatface', cursive;">
+                        Reset in nature.
+                    </p>
+                </div>
+
+                <!-- 🌞 Card 4 -->
+                <div
+                    class="min-w-[300px] snap-center bg-[#b04e9744] rounded-[2.5rem] shadow-2xl backdrop-blur-md p-6 flex flex-col items-center transform hover:-translate-y-1 transition-all duration-500">
+                    <img src="img/kol.jpeg" alt="Enlov joy"
+                        class="rounded-2xl w-64 h-56 object-cover mb-6 mx-auto shadow-md" />
+                    <p class="text-lg font-light text-center tracking-wide"
+                        style="font-family: 'Abril Fatface', cursive;">
+                        A moment just for you.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+<!-- SHARE YOUR GLOW STORY SECTION -->
+<section id="glow-story" class="relative bg-[#f7f0f4] text-[#333] px-6 py-24 z-10 overflow-hidden">
+  <div class="max-w-4xl mx-auto text-center mb-14">
+    <h2 class="text-5xl md:text-6xl tracking-tight leading-tight mb-4 text-[#5c7d6d]"
+        style="font-family: 'Abril Fatface', cursive;">
+      Share Your Glow Story
+    </h2>
+    <p class="text-lg md:text-xl italic opacity-90 text-[#8a8a8a]"
+       style="font-family: 'Montserrat', sans-serif;">
+      Your journey might inspire someone else's.
+    </p>
+  </div>
+
+  <!-- FORM -->
+  <form class="max-w-3xl mx-auto bg-white/40 backdrop-blur-xl p-8 rounded-[2rem] shadow-2xl space-y-6 text-left border border-white/30">
+    <div>
+      <label class="block mb-2 text-sm font-semibold text-[#5c7d6d] tracking-wide">Your Name</label>
+      <input type="text" required
+        class="w-full p-3 rounded-xl bg-white/60 text-[#333] placeholder-[#777] focus:outline-none focus:ring-2 focus:ring-[#b04e97]"
+        placeholder="e.g., Jordan A." />
+    </div>
+    <div>
+      <label class="block mb-2 text-sm font-semibold text-[#5c7d6d] tracking-wide">Your Story</label>
+      <textarea rows="4" required
+        class="w-full p-3 rounded-xl bg-white/60 text-[#333] placeholder-[#777] focus:outline-none focus:ring-2 focus:ring-[#b04e97]"
+        placeholder="Tell us how Enlov fits your ritual..."></textarea>
+    </div>
+    <div>
+      <label class="block mb-2 text-sm font-semibold text-[#5c7d6d] tracking-wide">Upload a Photo (optional)</label>
+      <input type="file" accept="image/*" class="block w-full text-sm text-[#5c7d6d]" />
+    </div>
+    <button type="submit"
+      class="w-full bg-[#b04e97] text-white font-semibold py-3 rounded-xl hover:bg-[#a63c83] transition">
+      Share My Story
+    </button>
+  </form>
+
+  <!-- LIVE PREVIEW GRID -->
+  <div id="story-preview" class="max-w-6xl mx-auto mt-20 grid md:grid-cols-3 gap-8 px-2 md:px-0">
+    <!-- Submitted stories will appear here instantly -->
+  </div>
+
+  <!-- 🔗 INSTAGRAM GALLERY -->
+  <div class="mt-28 text-center">
+    <h3 class="text-3xl md:text-4xl mb-4 text-[#5c7d6d]" style="font-family: 'Abril Fatface', cursive;">
+      Glow On The 'Gram
+    </h3>
+    <p class="text-lg text-[#8a8a8a] mb-8" style="font-family: 'Montserrat', sans-serif;">
+      Tag <strong>@enlov.wtr</strong> or use <strong>#GlowWithEnlov</strong> to be featured
+    </p>
+
+    <!-- Placeholder IG feed (replace with API integration or IG plugin later) -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+      <img src="img/ig1.jpg" alt="IG Post" class="rounded-xl object-cover w-full h-60 shadow-md" />
+      <img src="img/ig2.jpg" alt="IG Post" class="rounded-xl object-cover w-full h-60 shadow-md" />
+      <img src="img/ig3.jpg" alt="IG Post" class="rounded-xl object-cover w-full h-60 shadow-md" />
+      <img src="img/ig4.jpg" alt="IG Post" class="rounded-xl object-cover w-full h-60 shadow-md" />
+    </div>
+
+    <a href="https://www.instagram.com/enlov.wtr" target="_blank"
+      class="mt-8 inline-block text-[#b04e97] font-semibold text-lg hover:underline transition">
+      Visit Our Instagram →
+    </a>
+  </div>
+</section>
+
+    <!-- JS FOR LIVE PREVIEW -->
+    <script>
+        document.querySelector('#glow-story form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = e.target.querySelector('input[type="text"]').value;
+            const story = e.target.querySelector('textarea').value;
+            const imgFile = e.target.querySelector('input[type="file"]').files[0];
+
+            const reader = new FileReader();
+            reader.onload = () => {
+                const html = `
+        <div class="bg-white/10 backdrop-blur-md p-6 rounded-[2rem] shadow-xl text-white text-center animate-fade-in">
+          <img src="${reader.result}" alt="${name}'s glow" class="rounded-2xl w-full h-48 object-cover mb-4 mx-auto" />
+          <p class="text-sm italic opacity-80">"${story}" — ${name}</p>
+        </div>`;
+                document.getElementById('story-preview').insertAdjacentHTML('afterbegin', html);
+                e.target.reset();
+            };
+
+            if (imgFile) reader.readAsDataURL(imgFile);
+            else {
+                const html = `
+        <div class="bg-white/10 backdrop-blur-md p-6 rounded-[2rem] shadow-xl text-white text-center animate-fade-in">
+          <p class="text-sm italic opacity-80">"${story}" — ${name}</p>
+        </div>`;
+                document.getElementById('story-preview').insertAdjacentHTML('afterbegin', html);
+                e.target.reset();
+            }
+        });
+    </script>
+
+    <!-- OPTIONAL ANIMATION (Add to your Tailwind config if not already) -->
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.7s ease-out forwards;
+        }
+    </style>
+<section id="contact">
+  <footer class="bg-[#e7f1f4] text-center py-10 text-sm text-[#6b7d8e] font-light tracking-wide relative overflow-hidden">
+    <!-- Subtle Gradient Glow Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20 pointer-events-none"></div>
+
+    <!-- Footer Content -->
+    <div class="relative z-10">
+      <p class="text-base md:text-lg" style="font-family: 'Montserrat', sans-serif;">
+        &copy; 2025 <span class="font-semibold text-[#b04e97]">Enlov Water</span>. All rights reserved.
+      </p>
+      <p class="mt-2 italic text-[#8a8a8a]" style="font-family: 'Playfair Display', serif;">
+        Designed with clarity and chlorophyll.
+      </p>
+    </div>
+  </footer>
+</section>
+
+    <!-- Init AOS -->
+    <script>
+        AOS.init({
+            once: false,
+            duration: 1000,
+            offset: 100,
+        });
+    </script>
+
+    <!-- INTERSECTION OBSERVER SCRIPT -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.add('translate-x-0');
+                } else {
+                    entry.target.classList.remove('opacity-100');
+                    entry.target.classList.remove('translate-x-0');
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        document.querySelectorAll('.about-image, .about-text').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
