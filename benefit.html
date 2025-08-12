@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Enlov Water | Glow From Within</title>
+
+    <!-- Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Abril+Fatface&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            color: #2b2b2b;
+            padding-bottom: 4px;
+            transition: all .3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3BB143, #7ED957);
+            /* Fresh vibrant green */
+            transition: width .3s ease;
+            border-radius: 9999px;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: #2b2b2b;
+        }
+
+        /* ensure hero doesn't get hidden under fixed nav on small screens */
+        .site-offset {
+            padding-top: 96px;
+        }
+
+        /* adjust if your nav height changes */
+    </style>
+</head>
+
+<body class="bg-[#fafbfb] text-[#222] site-offset">
+
+    <!-- NAVBAR -->
+    <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md transition-all duration-300">
+        <div
+            class="max-w-7xl mx-auto px-6 py-2 flex flex-col items-center justify-center md:flex-row md:justify-between">
+            <a href="index.html" id="nav-logo" class="mb-2 md:mb-0 transition-all duration-300">
+                <img src="img/enlov logo.jpg" alt="Enlov Logo" class="h-20 md:h-24 w-auto" />
+            </a>
+
+            <!-- hamburger -->
+            <button id="nav-toggle" class="md:hidden text-[#3BB143]" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <!-- desktop links -->
+            <div id="nav-links" class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="buy.html" class="nav-link">Buy</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+
+        <!-- mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-center">
+            <a href="index.html" class="block nav-link">Home</a>
+            <a href="buy.html" class="block nav-link">Buy</a>
+            <a href="contact.html" class="block nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="relative h-[95vh] flex items-center justify-center bg-cover bg-center"
+        style="background-image: url('img/bene.png');" data-aos="zoom-in" data-aos-duration="1500">
+
+        <!-- dark gradient overlay for contrast -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent z-10"></div>
+        <div class="absolute inset-0 bg-black/10 backdrop-blur-sm z-5"></div>
+
+        <!-- content -->
+        <div class="relative z-20 text-center px-6 max-w-2xl">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-4" data-aos="fade-up"
+                data-aos-delay="200">
+                Sip Life in Every Drop —<br>Glow Starts From Within
+            </h1>
+            <p class="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-lg mx-auto" data-aos="fade-up"
+                data-aos-delay="400">
+                Not just water. It’s nature’s green magic — cleansing your cells, sparking energy, lighting your skin’s
+                fire.
+            </p>
+            <a href="buy.html"
+                class="inline-block bg-[#b04e97] text-white px-6 py-3 rounded-full shadow-md hover:bg-[#a63c83] transition-all text-base font-semibold"
+                data-aos="fade-up" data-aos-delay="600">
+                Shop Now
+            </a>
+        </div>
+    </div>
+<!-- INTRO -->
+<div class="max-w-5xl mx-auto py-16 px-6 text-center" data-aos="fade-up" id="intro">
+  <!-- Typewriter animation -->
+  <h2 id="typewriter-text" class="typewriter text-2xl md:text-3xl font-bold text-[#459845] mb-6">
+    Meet Enlov — Your Green Glow in a Bottle
+  </h2>
+
+  <p class="text-lg md:text-xl leading-relaxed text-gray-700 max-w-3xl mx-auto">
+    Pure chlorophyll-infused hydration that floods your body with fresh energy.
+    From flushing toxins to sparking your skin’s natural radiance,
+    this is nature’s power-up your hustle didn’t know it needed.
+  </p>
+</div>
+
+<style>
+  /* Typewriter effect */
+  .typewriter {
+    overflow: hidden;
+    border-right: .15em solid #459845;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    display: inline-block;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #459845; }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const typewriter = document.getElementById('typewriter-text');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          // Restart animation by removing and re-adding the class
+          typewriter.classList.remove('typewriter');
+          // Trigger reflow to reset animation
+          void typewriter.offsetWidth;
+          typewriter.classList.add('typewriter');
+        }
+      });
+    }, {
+      threshold: 0.5  // Trigger when 50% visible
+    });
+
+    observer.observe(typewriter);
+  });
+</script>
+
+    <!-- WHAT IS CHLOROPHYLL -->
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 px-6 mb-20 items-center">
+        <img src="img/leaf.png" alt="Chlorophyll Structure" class="rounded-lg shadow-lg object-cover"
+            data-aos="fade-right">
+        <div data-aos="fade-left">
+            <h2 class="text-3xl font-bold mb-4" style="color: #459845; font-family: 'Abril Fatface', cursive;">
+                What is Chlorophyll?
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Chlorophyll is the green pigment found in plants responsible for absorbing sunlight and aiding
+                photosynthesis.
+                But beyond its role in nature, it’s a nutritional goldmine for humans packed with antioxidants,
+                vitamins,
+                and detoxifying power.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                When added to your daily hydration, chlorophyll works from the inside out cleansing, energizing, and
+                revitalizing your body.
+            </p>
+        </div>
+    </div>
+
+    <!-- BENEFITS -->
+    <div class="bg-[#f9fafb] py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center"
+                style="color: #459845; font-family: 'Abril Fatface', cursive;" data-aos="fade-up">
+                Key Benefits
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Natural Detox -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="img/no.png" alt="Detox" class="h-40 w-56 mx-auto mb-4 object-cover rounded-xl">
+                    <h3 class="text-xl font-semibold mb-2">Natural Detox</h3>
+                    <p class="text-gray-600 text-sm">
+                        Flushes out toxins and supports liver health for a cleaner, healthier body.
+                    </p>
+                </div>
+
+                <!-- Skin Radiance -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/llol.png" alt="Glow" class="h-40 w-56 mx-auto mb-4 object-cover rounded-xl">
+                    <h3 class="text-xl font-semibold mb-2">Skin Radiance</h3>
+                    <p class="text-gray-600 text-sm">
+                        Rich in antioxidants to fight free radicals, reducing signs of aging and promoting a healthy
+                        glow.
+                    </p>
+                </div>
+
+                <!-- Energy Boost -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="img/elo.png" alt="Energy" class="h-40 w-56 mx-auto mb-4 object-cover rounded-xl">
+                    <h3 class="text-xl font-semibold mb-2">Energy Boost</h3>
+                    <p class="text-gray-600 text-sm">
+                        Increases oxygen levels in the blood, helping you feel more energized and alert.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- QUOTE -->
+    <div style="background-color: #459845;" class="text-white py-16 px-6 text-center" data-aos="zoom-in">
+        <blockquote class="text-2xl font-semibold max-w-3xl mx-auto">
+            “Drinking chlorophyll water daily is like giving your body a deep cleanse from the inside out.”
+        </blockquote>
+    </div>
+    <!-- HOW TO USE -->
+    <!-- HOW TO USE -->
+    <section class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+            <!-- Text Content -->
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-bold mb-6" style="color: #459845; font-family: 'Abril Fatface', cursive;">
+                    How to Enjoy Enlov
+                </h2>
+                <p class="text-gray-700 mb-8 text-lg leading-relaxed">
+                    Making Enlov a part of your daily routine is effortless — whether you’re kickstarting your morning,
+                    cooling down after a workout, or simply recharging mid-day.
+                </p>
+                <ul class="space-y-4 text-gray-600 text-base">
+                    <li class="flex items-start gap-3">
+                        <span class="w-3 h-3 bg-[#459845] rounded-full mt-1"></span>
+                        Start your morning with a glass to kickstart detox.
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="w-3 h-3 bg-[#459845] rounded-full mt-1"></span>
+                        Enjoy chilled after a workout for faster recovery.
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="w-3 h-3 bg-[#459845] rounded-full mt-1"></span>
+                        Pair with meals for improved digestion.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Image -->
+            <div data-aos="fade-left" class="relative">
+                <img src="img/bl.png" alt="Lifestyle"
+                    class="rounded-xl shadow-lg object-cover w-full h-[500px] md:h-[600px]" />
+                <div class="absolute inset-0 rounded-xl bg-black/10 hover:bg-black/0 transition"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gradient-to-r from-[#e6f4e6] to-[#d8edd8] text-center py-20 px-6" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-4" style="color: #459845; font-family: 'Abril Fatface', cursive;">
+            Experience Enlov for Yourself
+        </h2>
+        <p class="text-gray-700 text-lg mb-8 max-w-2xl mx-auto">
+            Pure, fresh, and infused with chlorophyll’s healing touch — your hydration ritual starts now.
+        </p>
+        <a href="buy.html"
+            class="inline-block bg-[#b04e97] text-white px-10 py-4 rounded-full shadow-lg hover:bg-[#a63c83] transition text-lg font-semibold">
+            Shop Now
+        </a>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-[#5c7d6d] text-white pt-12 pb-8 px-6 relative z-20" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
+            <div>
+                <h3 class="text-2xl font-bold mb-4" style="font-family: 'Abril Fatface', cursive;">Enlov</h3>
+                <p class="text-white/80 leading-relaxed">
+                    Hydration that glows with you — pure, fresh, and crafted for your daily ritual.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li><a href="buy.html" class="hover:text-white transition">Shop</a></li>
+                    <li><a href="benefit.html" class="hover:text-white transition">Benefits</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li><a href="https://www.instagram.com/enlov.wtr" target="_blank"
+                            class="hover:text-white transition">Instagram</a></li>
+                    <li><a href="#" class="hover:text-white transition">Facebook</a></li>
+                    <li><a href="#" class="hover:text-white transition">Twitter</a></li>
+                    <li><a href="#" class="hover:text-white transition">YouTube</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Join Our Newsletter</h4>
+                <p class="text-white/80 mb-4">Get updates on new flavors, offers, and hydration tips.</p>
+                <form class="flex">
+                    <input type="email" placeholder="Your email" required
+                        class="w-full px-4 py-2 rounded-l-lg focus:outline-none text-[#333]" />
+                    <button type="submit"
+                        class="bg-[#b04e97] px-4 py-2 rounded-r-lg hover:bg-[#a63c83] transition">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-10 border-t border-white/20 pt-6 text-center text-white/70 text-sm">
+            © 2025 Enlov. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                once: false,
+                mirror: true,
+                duration: 1000,
+                offset: 120
+            });
+
+            const navToggle = document.getElementById('nav-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            navToggle.addEventListener('click', () => {
+                const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', String(!expanded));
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible') {
+                    document.querySelectorAll('[data-aos]').forEach(el => el.classList.remove('aos-animate'));
+                    setTimeout(() => {
+                        AOS.refresh();
+                        window.dispatchEvent(new Event('scroll'));
+                    }, 50);
+                }
+            });
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('in-view');
+                    else entry.target.classList.remove('in-view');
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll('[data-aos]').forEach(el => io.observe(el));
+        });
+    </script>
+</body>
+
+</html>

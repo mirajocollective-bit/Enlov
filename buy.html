@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enlov Water | Glow From Within</title>
+
+    <!-- Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+   <style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-link {
+        position: relative;
+        font-weight: 500;
+        color: #2b2b2b;
+        padding-bottom: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0%;
+        height: 2px;
+        background: linear-gradient(90deg, #459845, #85c17e);
+        transition: width 0.3s ease;
+        border-radius: 9999px;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 100%;
+    }
+
+    .nav-link.active {
+        color: #2b2b2b;
+    }
+</style>
+</head>
+
+<body class="bg-[#fafbfb] text-[#222]">
+
+    <!-- NAVBAR -->
+    <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md transition-all duration-300">
+        <div id="nav-inner"
+            class="max-w-7xl mx-auto px-6 py-2 flex flex-col items-center justify-center md:flex-row md:justify-between transition-all duration-300">
+
+            <!-- LOGO -->
+            <a href="index.html" id="nav-logo" class="mb-2 md:mb-0 transition-all duration-300">
+                <img src="img/enlov logo.jpg" alt="Enlov Logo" class="h-20 md:h-24 w-auto" />
+            </a>
+
+            <!-- HAMBURGER -->
+            <button id="nav-toggle" class="md:hidden text-[#459845]">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- NAV LINKS DESKTOP -->
+            <div id="nav-links" class="hidden md:flex space-x-6">
+                 <a href="index.html" class="nav-link">Home</a>
+              <a href="benefit.html" class="nav-link">Benefits</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+
+        <!-- NAV LINKS MOBILE -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-center">
+              <a href="index.html" class="nav-link">Home</a>
+            <a href="benefit.html" class="block nav-link">Benefits</a>
+            <a href="contact.html" class="block nav-link">Contact</a>
+        </div>
+    </nav>
+
+
+    
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
+
+<section id="glow-story" class="relative text-[#333] px-6 py-24 z-10 overflow-hidden">
+  <div class="max-w-4xl mx-auto text-center mb-14">
+    <h2 class="text-5xl md:text-6xl tracking-tight leading-tight mb-4 text-[#5c7d6d]"
+        style="font-family: 'Abril Fatface', cursive;">
+      Share Your Glow Story
+    </h2>
+    <p class="text-lg md:text-xl italic opacity-90 text-[#8a8a8a]"
+       style="font-family: 'Montserrat', sans-serif;">
+      Your journey might inspire someone else's.
+    </p>
+  </div>
+
+ 
+<!-- ================= FOOTER ================= -->
+<footer class="bg-[#5c7d6d] text-white pt-12 pb-8 px-6 relative z-20">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
+    
+    <!-- Brand -->
+    <div>
+      <h3 class="text-2xl font-bold mb-4" style="font-family: 'Abril Fatface', cursive;">
+        Enlov
+      </h3>
+      <p class="text-white/80 leading-relaxed">
+        Hydration that glows with you pure, fresh, and crafted for your daily ritual.
+      </p>
+    </div>
+
+    <!-- Links -->
+    <div>
+      <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-white/80">
+        <li><a href="buy.html" class="hover:text-white transition">Shop</a></li>
+        <li><a href="benefit.html" class="hover:text-white transition">Benefits</a></li>
+        <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div>
+      <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+      <ul class="space-y-2 text-white/80">
+        <li><a href="https://www.instagram.com/enlov.wtr" target="_blank" class="hover:text-white transition">Instagram</a></li>
+        <li><a href="#" class="hover:text-white transition">Facebook</a></li>
+        <li><a href="#" class="hover:text-white transition">Twitter</a></li>
+        <li><a href="#" class="hover:text-white transition">YouTube</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div>
+      <h4 class="font-semibold text-lg mb-4">Join Our Newsletter</h4>
+      <p class="text-white/80 mb-4">Get updates on new flavors, offers, and hydration tips.</p>
+      <form class="flex">
+        <input type="email" placeholder="Your email" required class="w-full px-4 py-2 rounded-l-lg focus:outline-none text-[#333]" />
+        <button type="submit" class="bg-[#b04e97] px-4 py-2 rounded-r-lg hover:bg-[#a63c83] transition">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="mt-10 border-t border-white/20 pt-6 text-center text-white/70 text-sm">
+    © 2025 Enlov. All rights reserved.
+  </div>
+</footer>
