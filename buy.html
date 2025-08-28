@@ -1,161 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enlov Water | Glow From Within</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enlov Water | Shop</title>
 
-    <!-- Fonts & CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Abril+Fatface&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 
-   <style>
-    body {
-        font-family: 'Montserrat', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
+  <!-- Stripe.js (required for redirectToCheckout) -->
+  <script src="https://js.stripe.com/v3/"></script>
 
-    .nav-link {
-        position: relative;
-        font-weight: 500;
-        color: #2b2b2b;
-        padding-bottom: 4px;
-        transition: all 0.3s ease;
-    }
-
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0%;
-        height: 2px;
-        background: linear-gradient(90deg, #459845, #85c17e);
-        transition: width 0.3s ease;
-        border-radius: 9999px;
-    }
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-        width: 100%;
-    }
-
-    .nav-link.active {
-        color: #2b2b2b;
-    }
-</style>
+  <style>
+    body { font-family: 'Montserrat', sans-serif; margin:0; padding:0; background:#fafbfb; color:#222; }
+    .nav-link { position: relative; font-weight:500; color:#2b2b2b; padding-bottom:4px; }
+    .nav-link::after { content:''; position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:0%; height:2px; background:linear-gradient(90deg,#459845,#85c17e); transition:width .3s; border-radius:9999px; }
+    .nav-link:hover::after, .nav-link.active::after { width:100%; }
+  </style>
 </head>
+<body>
 
-<body class="bg-[#fafbfb] text-[#222]">
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html"><img src="img/enlov logo.jpg" alt="Enlov" class="h-16"></a>
 
-    <!-- NAVBAR -->
-    <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md transition-all duration-300">
-        <div id="nav-inner"
-            class="max-w-7xl mx-auto px-6 py-2 flex flex-col items-center justify-center md:flex-row md:justify-between transition-all duration-300">
+      <div class="flex items-center space-x-6">
+        <a href="index.html" class="nav-link hidden md:inline">Home</a>
+        <a href="benefit.html" class="nav-link hidden md:inline">Benefits</a>
+        <a href="contact.html" class="nav-link hidden md:inline">Contact</a>
 
-            <!-- LOGO -->
-            <a href="index.html" id="nav-logo" class="mb-2 md:mb-0 transition-all duration-300">
-                <img src="img/enlov logo.jpg" alt="Enlov Logo" class="h-20 md:h-24 w-auto" />
-            </a>
-
-            <!-- HAMBURGER -->
-            <button id="nav-toggle" class="md:hidden text-[#459845]">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-
-            <!-- NAV LINKS DESKTOP -->
-            <div id="nav-links" class="hidden md:flex space-x-6">
-                 <a href="index.html" class="nav-link">Home</a>
-              <a href="benefit.html" class="nav-link">Benefits</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-        </div>
-
-        <!-- NAV LINKS MOBILE -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-center">
-              <a href="index.html" class="nav-link">Home</a>
-            <a href="benefit.html" class="block nav-link">Benefits</a>
-            <a href="contact.html" class="block nav-link">Contact</a>
-        </div>
-    </nav>
-
-
-    
-<!-- GOOGLE FONTS -->
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
-
-<section id="glow-story" class="relative text-[#333] px-6 py-24 z-10 overflow-hidden">
-  <div class="max-w-4xl mx-auto text-center mb-14">
-    <h2 class="text-5xl md:text-6xl tracking-tight leading-tight mb-4 text-[#5c7d6d]"
-        style="font-family: 'Abril Fatface', cursive;">
-      Share Your Glow Story
-    </h2>
-    <p class="text-lg md:text-xl italic opacity-90 text-[#8a8a8a]"
-       style="font-family: 'Montserrat', sans-serif;">
-      Your journey might inspire someone else's.
-    </p>
-  </div>
-
- 
-<!-- ================= FOOTER ================= -->
-<footer class="bg-[#5c7d6d] text-white pt-12 pb-8 px-6 relative z-20">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
-    
-    <!-- Brand -->
-    <div>
-      <h3 class="text-2xl font-bold mb-4" style="font-family: 'Abril Fatface', cursive;">
-        Enlov
-      </h3>
-      <p class="text-white/80 leading-relaxed">
-        Hydration that glows with you pure, fresh, and crafted for your daily ritual.
-      </p>
-    </div>
-
-    <!-- Links -->
-    <div>
-      <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
-      <ul class="space-y-2 text-white/80">
-        <li><a href="buy.html" class="hover:text-white transition">Shop</a></li>
-        <li><a href="benefit.html" class="hover:text-white transition">Benefits</a></li>
-        <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
-      </ul>
-    </div>
-
-    <!-- Social -->
-    <div>
-      <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
-      <ul class="space-y-2 text-white/80">
-        <li><a href="https://www.instagram.com/enlov.wtr" target="_blank" class="hover:text-white transition">Instagram</a></li>
-        <li><a href="#" class="hover:text-white transition">Facebook</a></li>
-        <li><a href="#" class="hover:text-white transition">Twitter</a></li>
-        <li><a href="#" class="hover:text-white transition">YouTube</a></li>
-      </ul>
-    </div>
-
-    <!-- Newsletter -->
-    <div>
-      <h4 class="font-semibold text-lg mb-4">Join Our Newsletter</h4>
-      <p class="text-white/80 mb-4">Get updates on new flavors, offers, and hydration tips.</p>
-      <form class="flex">
-        <input type="email" placeholder="Your email" required class="w-full px-4 py-2 rounded-l-lg focus:outline-none text-[#333]" />
-        <button type="submit" class="bg-[#b04e97] px-4 py-2 rounded-r-lg hover:bg-[#a63c83] transition">
-          Subscribe
+        <!-- CART ICON -->
+        <button id="cart-btn" aria-label="Cart" class="relative">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#5c7d6d]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m13-9l2 9m-5-4h-4" />
+          </svg>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-500 text-white text-xs px-2 py-1 rounded-full">0</span>
         </button>
-      </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE SPACER FOR FIXED NAV -->
+  <div class="h-20"></div>
+
+  <!-- SHOP SECTION -->
+  <section id="shop" class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-5xl text-center mb-12 text-[#5c7d6d]" style="font-family:'Abril Fatface',cursive">Shop Enlov Water</h2>
+
+      <div id="product-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Product cards will be rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CART DRAWER -->
+  <div id="cart-drawer" class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50 flex flex-col">
+    <div class="p-4 flex justify-between items-center border-b">
+      <h3 class="text-xl font-semibold">Your Cart</h3>
+      <button id="cart-close" aria-label="Close cart">✖</button>
+    </div>
+
+    <div id="cart-items" class="flex-1 p-4 space-y-4 overflow-y-auto"></div>
+
+    <div class="p-4 border-t">
+      <div class="flex justify-between font-semibold mb-4">
+        <span>Total:</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button id="checkout-btn" class="w-full bg-[#5c7d6d] text-white py-3 rounded-lg hover:bg-[#4a655a] transition">
+        Checkout
+      </button>
     </div>
   </div>
 
-  <!-- Bottom -->
-  <div class="mt-10 border-t border-white/20 pt-6 text-center text-white/70 text-sm">
-    © 2025 Enlov. All rights reserved.
-  </div>
-</footer>
+  <!-- FOOTER (minimal version) -->
+  <footer class="bg-[#5c7d6d] text-white pt-12 pb-8 px-6 mt-20">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-4" style="font-family:'Abril Fatface',cursive">Enlov</h3>
+      <p class="text-white/80">Hydration that glows with you — pure, fresh, crafted for your daily ritual.</p>
+      <div class="mt-6 text-sm text-white/70">© 2025 Enlov. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT: products, cart logic, stripe checkout -->
+  <script>
+    // ========== CONFIG ==========
+    // Replace with your Stripe publishable key:
+    const STRIPE_PUBLISHABLE = "pk_test_REPLACE_WITH_YOURS";
+
+    // Product catalog (id must match server-side mapping)
+    const PRODUCTS = [
+      { id: "chlorophyll", name: "Chlorophyll", price: 3.99, description: "Linked with skin glow, fresh breath, and natural cleansing.", img: "img/chlorophyll.jpg" },
+      { id: "lemon", name: "Lemon", price: 3.99, description: "Refreshing Vitamin C boost and immune support.", img: "img/enl.png" },
+      { id: "ginger", name: "Ginger", price: 3.99, description: "Traditionally used for digestion and natural energy boost.", img: "img/ginger.jpg" },
+      { id: "mint", name: "Mint", price: 3.99, description: "Freshness and digestive comfort in every sip.", img: "img/mint.jpg" },
+      { id: "purified", name: "Purified Water", price: 2.99, description: "Pure hydration for health and energy.", img: "img/purified.jpg" }
+    ];
+
+    // ========== CART STATE ==========
+    let cart = JSON.parse(localStorage.getItem('enlov_cart') || "[]");
+
+    // Utility to save cart
+    function saveCart() {
+      localStorage.setItem('enlov_cart', JSON.stringify(cart));
+    }
+
+    // Render product grid
+    function renderProducts() {
+      const grid = document.getElementById('product-grid');
+      grid.innerHTML = PRODUCTS.map(p => `
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+          <img src="${p.img}" alt="${p.name}" class="h-64 w-full object-cover">
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-2xl font-semibold mb-2">${p.name}</h3>
+            <p class="text-gray-600 flex-1">${p.description}</p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-xl font-bold text-[#5c7d6d]">$${p.price.toFixed(2)}</span>
+              <button data-id="${p.id}" class="add-to-cart bg-[#5c7d6d] text-white px-4 py-2 rounded-lg hover:bg-[#4a655a] transition">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Toggle cart drawer
+    function openCart() {
+      document.getElementById('cart-drawer').classList.remove('translate-x-full');
+    }
+    function closeCart() {
+      document.getElementById('cart-drawer').classList.add('translate-x-full');
+    }
+
+    // Add item
+    function addToCart(id, qty = 1) {
+      const product = PRODUCTS.find(p => p.id === id);
+      if (!product) return;
+      const existing = cart.find(i => i.id === id);
+      if (existing) existing.qty += qty;
+      else cart.push({ id: product.id, name: product.name, price: product.price, qty });
+      saveCart();
+      renderCart();
+      openCart();
+    }
+
+    // Remove item
+    function removeFromCart(id) {
+      cart = cart.filter(i => i.id !== id);
+      saveCart();
+      renderCart();
+    }
+
+    // Update qty
+    function updateQty(id, delta) {
+      const item = cart.find(i => i.id === id);
+      if (!item) return;
+      item.qty = Math.max(1, item.qty + delta);
+      saveCart();
+      renderCart();
+    }
+
+    // Render cart drawer
+    function renderCart() {
+      const container = document.getElementById('cart-items');
+      container.innerHTML = "";
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price * item.qty;
+        container.insertAdjacentHTML('beforeend', `
+          <div class="flex justify-between items-center border rounded p-3">
+            <div>
+              <h4 class="font-semibold">${item.name}</h4>
+              <p class="text-sm text-gray-500">$${item.price.toFixed(2)} each</p>
+              <div class="mt-2 flex items-center space-x-2">
+                <button class="px-2 py-1 border rounded qty-minus" data-id="${item.id}">-</button>
+                <span class="text-sm">${item.qty}</span>
+                <button class="px-2 py-1 border rounded qty-plus" data-id="${item.id}">+</button>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="font-semibold">$${(item.price * item.qty).toFixed(2)}</div>
+              <button class="text-red-500 text-sm mt-2 remove-btn" data-id="${item.id}">Remove</button>
+            </div>
+          </div>
+        `);
+      });
+
+      document.getElementById('cart-total').textContent = `$${total.toFixed(2)}`;
+      document.getElementById('cart-count').textContent = cart.reduce((s,i) => s + i.qty, 0);
+
+      // Attach listeners to remove/qty buttons
+      document.querySelectorAll('.remove-btn').forEach(b => b.onclick = () => removeFromCart(b.dataset.id));
+      document.querySelectorAll('.qty-minus').forEach(b => b.onclick = () => updateQty(b.dataset.id, -1));
+      document.querySelectorAll('.qty-plus').forEach(b => b.onclick = () => updateQty(b.dataset.id, +1));
+    }
+
+    // Checkout - calls backend to create checkout session
+    async function checkout() {
+      if (cart.length === 0) { alert('Cart is empty'); return; }
+
+      // Send cart items to server to create a Stripe Checkout Session
+      try {
+        const res = await fetch('/create-checkout-session', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ items: cart })
+        });
+        const data = await res.json();
+        if (data.error) throw new Error(data.error);
+
+        const stripe = Stripe(STRIPE_PUBLISHABLE);
+        // redirectToCheckout accepts a sessionId returned from the server
+        const result = await stripe.redirectToCheckout({ sessionId: data.sessionId });
+        if (result.error) alert(result.error.message);
+      } catch (err) {
+        console.error(err);
+        alert('Checkout failed — check console and your server.');
+      }
+    }
+
+    // ========== INIT ==========
+    document.addEventListener('DOMContentLoaded', () => {
+      renderProducts();
+      renderCart();
+
+      // click handlers
+      document.getElementById('cart-btn').addEventListener('click', openCart);
+      document.getElementById('cart-close').addEventListener('click', closeCart);
+      document.getElementById('checkout-btn').addEventListener('click', checkout);
+
+      // delegate add-to-cart clicks
+      document.body.addEventListener('click', (e) => {
+        if (e.target.matches('.add-to-cart')) {
+          const id = e.target.dataset.id;
+          addToCart(id, 1);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
